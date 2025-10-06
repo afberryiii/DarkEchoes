@@ -1,0 +1,154 @@
+/* === Global Styles === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Container === */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* === Title === */
+.title {
+  font-size: 3rem;
+  color: #e63946;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(230, 57, 70, 0.7);
+  margin-bottom: 30px;
+}
+
+/* === Layout === */
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* === Episode List === */
+.episode-list {
+  width: 35%;
+  text-align: left;
+}
+
+.episode-list h2 {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 5px;
+}
+
+.episode-list ul {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.episode-list li {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.episode-list li:hover {
+  background: rgba(230, 57, 70, 0.2);
+}
+
+.episode-list li.active {
+  background: #e63946;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* === Episode Detail === */
+.episode-detail {
+  width: 60%;
+  text-align: left;
+}
+
+.episode-detail h2 {
+  color: #e63946;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.episode-detail h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.episode-detail p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 25px;
+  background: #e63946;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #b52232;
+}
+
+/* === Scrollbar Styling === */
+.episode-list ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.episode-list ul::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 3px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .episode-list,
+  .episode-detail {
+    width: 100%;
+    text-align: center;
+  }
+
+  .episode-list ul {
+    max-height: none;
+  }
+}
